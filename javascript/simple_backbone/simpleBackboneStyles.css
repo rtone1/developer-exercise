@@ -1,0 +1,9 @@
+h1{
+  background-color: #555;
+  margin: 0px;
+  padding: 15px 10px;
+  border-bottom: 2px solid #404042;
+}
+
+#quotesList li{ list-style: none; }
+.load-more-projects{ margin: 15px 0px; }

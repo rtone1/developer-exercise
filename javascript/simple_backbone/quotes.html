@@ -2,11 +2,40 @@
                     "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-  <script src="http://code.jquery.com/jquery-latest.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js"></script>
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <link rel="stylesheet" href="simpleBackboneStyles.css">
 </head>
-<body>
+  <body>
 
-</body>
+    <nav class="pull-right">
+      <a class="btn all">All</a>
+      <a class="btn movies">Movies</a>
+      <a class="btn games">Games</a>
+    </nav>
+    <h1>Quotes for your enjoyment.</h1>
+
+    <ul id="quotesList"></ul>
+    <div id="load-more-quotes" class="text-center">
+         <a class="btn btn-default load-more-quotes">Show More</a>
+    </div>
+
+    <!-- TEMPLATE FOR QUOTES -->
+    <script type='text/template' id='quotesTemplate'>
+      <div class="wrapper">
+          <h2><%= context %></h2>
+          <em>Category: <%= theme %></em>
+          <blockquote>
+            <p class="lead"><%= quote %></p>
+            <cite>- <%= source %></cite>
+          </blockquote>
+      </div>
+    </script>
+
+    <!-- DEPENDENCIES -->
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.1.2/backbone-min.js"></script>
+    <script src="quotesScripts.js"></script>
+
+  </body>
 </html>
