@@ -1,14 +1,14 @@
 // NOTE. I'm not sure if this paginated view is the best way to create pagination, so
 // I would appriciate any feed back you can give me.
-// I left all the scipts in this file in order to make it easier to navigate, but
-// separating the models, collections, and views is better way to do things.
+// I left all the scripts in this file in order to make it easier to navigate, but
+// separating the models, collections, and views is a better way to do things.
 
 var app =  app || {};
 
   // BAKCBONE MODEL
   app.QuotesModel = Backbone.Model.extend({});
 
-  // BACKBONE COLLECTIONS
+  // BACKBONE TEMPLATE
   app.QuotesTemplate = $('#quotesTemplate').html();
 
   // BACKBONE COLLECTIONS
@@ -101,7 +101,7 @@ var app =  app || {};
       }
   });
 
-  // BACKBONE VIEW TO TIGGER LOAD OBJECTS
+  // BACKBONE VIEW TO TRIGGER LOAD OBJECTS
   app.LoadMoreQuotesView = Backbone.View.extend({
       el: $("#load-more-quotes")
   });
@@ -110,7 +110,7 @@ var app =  app || {};
 // RUN SCRIPTS WHEN DOCUMENT IS READY
 $(document).ready(function(){
 
-    // INITIALIZE VIEW WHITH ALL QUOTES
+    // INITIALIZE VIEW WITH ALL QUOTES
     function init(){
           app.quotes = new app.QuotesList();
           app.quotesView = new app.QuotesView({
@@ -123,13 +123,13 @@ $(document).ready(function(){
     };
     init();
 
-    // RERENDER VIEW WHITH ALL QUOTES
+    // RERENDER VIEW WITH ALL QUOTES
     $('.all').on('click', function(){
           $('ul').empty();
           init();
     });
 
-    // INITIALIZE VIEW WHITH GAMES QUOTES
+    // INITIALIZE VIEW WITH GAMES QUOTES
     $('.games').on('click', function(){
           $('ul').empty();
           app.gameQuotesList = new app.GameQuotesList();
@@ -142,7 +142,7 @@ $(document).ready(function(){
           });
     });
 
-    // INITIALIZE VIEW WHITH MOVIES QUOTES
+    // INITIALIZE VIEW WITH MOVIES QUOTES
     $('.movies').on('click', function(){
           $('ul').empty();
           app.moviesQuotesList = new app.MovieQuotesList();

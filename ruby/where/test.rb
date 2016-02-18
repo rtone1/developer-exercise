@@ -2,8 +2,8 @@ require 'minitest/autorun'
 require 'minitest/rg'
 
 # NOTE
-# I made my method in the Array class in order to plug in to the provide array of objects.
-# The method takes one input or array, as provide on test 4.
+# I made my method in the Array class in order to plug it into the provided array of objects.
+# The method takes one input or array, as provided on test 4.
 
 class Array
 
@@ -25,7 +25,7 @@ class Array
         end
     end
 
-    # CONDITIANAL STATEMENT TO PUSH CORRECT HASHES
+    # CONDITIONAL STATEMENT TO PUSH CORRECT HASHES
     if @iVal != nil && @sVal != nil # IF TWO VALUES ARE PRESENT
         self.map do |prop|
             if ( prop[symKey] == @iVal && @sVal.match(prop[symKey2]) )
@@ -33,14 +33,14 @@ class Array
             end
         end
 
-    elsif @iVal == @iVal.to_i  # IF ON VALUE IS PRESENT AND EQUAL AN INTEGER
+    elsif @iVal == @iVal.to_i  # IF VALUE IS PRESENT AND EQUALS AN INTEGER
         self.map do |prop|
             if ( prop[symKey] == @iVal )
                 @returnArr.push(prop)
             end
         end
 
-    elsif @sVal.to_s =~ /[[a-z]]/i  # IF ON VALUE IS PRESENT AND EQUAL AN STRING
+    elsif @sVal.to_s =~ /[[a-z]]/i  # IF VALUE IS PRESENT AND EQUALS A STRING
         self.map do |prop|
             if ( prop[symKey] == @sVal )
                     @returnArr.push(prop)

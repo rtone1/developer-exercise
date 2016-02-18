@@ -1,5 +1,5 @@
 #NOTE. Hi, this was a lot of fun. You can play the game on terminal by uncommenting
-# some methods I mark below and initializing the Game class(just uncomment).
+# some methods I marked below and initializing the Game class(just uncomment).
 
 class Card
 
@@ -121,7 +121,7 @@ class Game
 
   def dealer_bust_or_win
       sum_of_dealer
-        while @dealertotal <= @total        # LOOP UNTIL DEALER TOTAL IN GREATER THAN PLAYES
+        while @dealertotal <= @total        # LOOP UNTIL DEALER's TOTAL IS GREATER THAN PLAYERS
             @dealer.push(@game_deck.deal_card)
             sum_of_dealer
         end

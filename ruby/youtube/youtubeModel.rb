@@ -1,5 +1,5 @@
 #NOTE. Found a great example of YouTube's client on YouTube's API documentation website.
-# Below is what they recomended with a few of my madifications
+# Below is what they recommended with a few of my modifications.
 
 # I AM RUNNING THE API WITH ruby 2.1.2, sinatra, and gem 'google-api-client', '0.7.1'
 
@@ -57,7 +57,7 @@ class YouTube
         end
       end
 
-      return videosResults #RETURN ONLY VIDEO RESULST
+      return videosResults #RETURN ONLY VIDEO RESULTS
 
     end
   end

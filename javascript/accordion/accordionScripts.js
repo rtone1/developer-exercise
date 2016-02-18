@@ -1,5 +1,5 @@
 //NOTE. Accordion plugin works by using a parent element like .accordion-header and finding
-// child element like a header (in this case a a) and body (in this case a div)
+// child elements like a header (in this case an a tag) and body (in this case a div tag)
 
 var usersAccordion; // NAME SPACE FOR USE IN TEST.JS
 
